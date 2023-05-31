@@ -6,7 +6,9 @@
     "depends": [
         "base",
     ],
-    "data": [],
+    "data": [
+        "views/templates.xml",
+    ],
     "demo": [],
     "application": True,
     "installable": True,
