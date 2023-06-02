@@ -5,11 +5,13 @@
     "category": "Website",
     "license": "LGPL-3",
     "depends": [
-        "base",
+        "website",
     ],
     "data": [
         "security/ir.model.access.csv",
-        "views/templates.xml",
+        "views/academy_teachers_menus.xml",
+        "views/academy_teachers_views.xml",
+        "views/views.xml",
     ],
     "demo": [
         "demo/demo.xml",
