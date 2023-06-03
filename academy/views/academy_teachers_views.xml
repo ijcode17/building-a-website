@@ -30,4 +30,19 @@
       </div>
     </t>
   </template>
+  <template id="products_item" inherit_id="website_sale.products_item">
+    <xpath expr="//h6[hasclass('o_wsale_products_item_title')]" position="after">
+      <p>
+        <t t-esc="product.id" />
+      </p>
+    </xpath>
+    <xpath expr="//h6[hasclass('o_wsale_products_item_title')]" position="attributes">
+      <attribute name="class" add="col-md-12" separator=" " />
+    </xpath>
+  </template>
+  <template id="frontend_layout" inherit_id="portal.frontend_layout">
+    <xpath expr="//div[hasclass('container')]" position="inside">
+      <t t-set="global_categs" t-value="env['product.public.category'].search([('parent_id', '=', 'False')])" />
+    </xpath>
+  </template>
 </odoo>

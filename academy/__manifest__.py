@@ -5,7 +5,7 @@
     "category": "Website",
     "license": "LGPL-3",
     "depends": [
-        "website",
+        "website_sale",
     ],
     "data": [
         "security/ir.model.access.csv",
