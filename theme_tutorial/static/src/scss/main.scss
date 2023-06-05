@@ -1,0 +1,19 @@
+$brand-primary: #7700ff;
+$border-radius-lg: 0rem !default;
+$border-radius: 0rem !default;
+
+.services{
+  background: #7700ff;
+  padding: 1rem;
+  margin: 2rem 0 3rem;
+  li{
+    display: block;
+    position: relative;
+    background: #1084ff;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+}

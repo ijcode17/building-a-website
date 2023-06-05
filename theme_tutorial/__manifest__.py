@@ -12,5 +12,6 @@
         "views/layout.xml",
         "views/pages.xml",
     ],
+    "assets": {"web.assets_frontend": ["theme_tutorial/static/src/scss/main.scss"]},
     "installable": True,
 }
