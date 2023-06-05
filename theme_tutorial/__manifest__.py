@@ -10,6 +10,7 @@
     ],
     "data": [
         "views/layout.xml",
+        "views/pages.xml",
     ],
     "installable": True,
 }
