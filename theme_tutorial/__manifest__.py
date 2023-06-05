@@ -11,9 +11,13 @@
     "data": [
         "views/image_gallery.xml",
         "views/snippets.xml",
+        "views/options.xml",
         "views/layout.xml",
         "views/pages.xml",
     ],
-    "assets": {"web.assets_frontend": ["theme_tutorial/static/src/scss/main.scss"]},
+    "assets": {
+        "web.assets_frontend": ["theme_tutorial/static/src/scss/main.scss"],
+        "web.assets_editor": ["theme_tutorial/static/src/js/tutorial_editor.js"],
+    },
     "installable": True,
 }
