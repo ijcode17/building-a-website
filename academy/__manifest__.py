@@ -21,6 +21,9 @@
             "academy/static/src/js/animal.js",
             "academy/static/src/js/dog.js",
             "academy/static/src/js/hamster.js",
+            "academy/static/src/js/counter.js",
+            "academy/static/src/js/demo_rpc.js",
+            "academy/static/src/js/academy_tour.js",
         ]
     },
     "application": True,
