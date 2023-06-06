@@ -16,6 +16,13 @@
     "demo": [
         "demo/demo.xml",
     ],
+    "assets": {
+        "web.assets_frontend": [
+            "academy/static/src/js/animal.js",
+            "academy/static/src/js/dog.js",
+            "academy/static/src/js/hamster.js",
+        ]
+    },
     "application": True,
     "installable": True,
 }
