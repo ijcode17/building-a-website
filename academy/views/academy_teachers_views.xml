@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+  <template id="index">
+    <t t-call="website.layout">
+          <t t-set="title">Academy</t>
+          <div class="oe_structure">
+            <div class="container">
+              <t t-foreach="teachers" t-as="teacher">
+                <p class="rpc-container" t-att-data-teacher-id="teacher.id">
+                  <a class="rpc-button" href="#">
+                    <t t-esc="teacher.name" />
+                  </a>
+                </p>
+              </t>
+              <div class="counter">
+                <span class="val" />
+                <button>Increment me!</button>
+              </div>
+              <div class="biography" />
+            </div>
+          </div>
+    </t>
+  </template>
+  <template id="biography">
+    <t t-call="website.layout">
+      <t t-set="title">Academy</t>
+      <div class="oe_structure">
+        <div class="container">
+          <h3 t-field="teacher.name" />
+          <p>Last modified <i t-field="teacher.write_date" t-options="{'widget': 'relative'}" /></p>
+        </div>
+        <div>
+          <p t-field="teacher.biography" />
+        </div>
+      </div>
+      <div class="oe_structure" />
+    </t>
+  </template>
+  <template id="products_item" inherit_id="website_sale.products_item">
+    <xpath expr="//h6[hasclass('o_wsale_products_item_title')]" position="after">
+      <p>
+        <t t-esc="product.id" />
+      </p>
+    </xpath>
+    <xpath expr="//h6[hasclass('o_wsale_products_item_title')]" position="attributes">
+      <attribute name="class" add="col-md-12" separator=" " />
+    </xpath>
+  </template>
+  <template id="frontend_layout" inherit_id="portal.frontend_layout">
+    <xpath expr="//div[hasclass('container')]" position="inside">
+      <t t-set="global_categs" t-value="env['product.public.category'].search([('parent_id', '=', 'False')])" />
+    </xpath>
+  </template>
+</odoo>
